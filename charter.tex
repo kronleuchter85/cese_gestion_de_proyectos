@@ -7,7 +7,7 @@ codirector, % Uncomment to add a codirector to the title page
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Sistema Embebido para un Robot de Exploracion Ambiental} 
+\titulo{Sistema Embebido para un Robot de Exploración Ambiental} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -17,7 +17,7 @@ codirector, % Uncomment to add a codirector to the title page
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Gonzalo F. Carreno} 
+\autor{Gonzalo F. Carreño} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{DIRECTOR}
@@ -38,9 +38,9 @@ codirector, % Uncomment to add a codirector to the title page
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{11 de marzo de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2021} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2022}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{13 de marzo de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{18 de mayo de 2023} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{20 de Noviembre de 2023}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -92,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{red}{la implementación de un prototipo de un sistema embebido para un robot de exploracion ambiental}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{black}{la implementación de un prototipo de un sistema embebido para un robot de exploracion ambiental}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$14.000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -115,26 +115,20 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-
 \begin{consigna}{black} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección. En cada entrega parcial deben eliminar los comandos begin y end del bloque consigna de las secciones que hayan completado.
-El presente proyecto es un emprendimiento personal que busca volcar los conocimientos aprendidos de disenio y programacion de sistemas embebidos, tomando como caso de uso un robot de exploracion ambiental, con las funciones basicas de poder desplazarse y sensar el medio ambiente. Por lo tanto, no se cuenta con financiamiento de ninguna institucion, y no se destina a ningun cliente.
+El presente proyecto es un emprendimiento personal que busca volcar los conocimientos aprendidos de diseño y programación de sistemas embebidos tomando como caso de uso un robot de exploración ambiental. 
 
+En una primera versión tendrá las funciones básicas de poder desplazarse, sensar el medio ambiente, ser controlado por un mando a distancia de manera cableada, y comunicar las diferentes mediciones al control de mandos para su visualización. No se cuenta con financiamiento de ninguna institución, y ni se destina a ningún cliente.
+
+
+\textit{\textbf{Estado del arte:}}
 Los robots exploradores son dispositivos robotizados que han sido creados con el fin de reconocer y explorar un lugar o terreno siendo capaces de moverse de forma autónoma o controlados por personas a control remoto. Su objetivo es evitar poner en riesgo la vida de los humanos, ya sea debido a que el lugar es inaccesible o porque se encuentra en una zona contaminada.
-
-Tienen como finalidad hacer reconocimiento allí en donde el hombre no puede llegar por ser una zona inaccesible o porque supondría un peligro para la salud. También son utilizados en lugares de difícil acceso, a donde sí que podría llegar una persona solo que empleando más tiempo y recursos económicos. 
-
+Tienen como finalidad hacer reconocimiento allí en donde el hombre no puede llegar por ser una zona inaccesible o porque supondría un peligro para la salud. También son utilizados en lugares de difícil acceso, a donde sí que podría llegar una persona solo que empleando más tiempo y recursos económicos.
 Una de sus principales características es que están diseñados para moverse por terrenos con alta dificultad para desplazarse. En función de las necesidades del entorno en el que van a trabajar, disponen de diferentes sistemas de motricidad, como son los bípedos o cuadrúpedos, a los que hay sumar los que se mueven por medio de una oruga.
-
 En cuanto a la forma de control, se pueden manejar por control remoto, habiendo equipos más sofisticados que gracias a aplicaciones controladas por Inteligencia Artificial están preparados para desplazarse y tomar decisiones de forma autónoma.
-Algunos de los tipos de robots exploradores más conocidos son: 
+Algunos de los tipos de robots exploradores más conocidos son: robots exploradores espaciales, robots exploradores de minas, robots exploradores de rescate en catástrofes, robots exploradores de tuberías, robots exploradores acuáticos y/o submarinos, etc.
 
-\begin{itemize}
-	\item Robots exploradores espaciales.
-	\item Robots exploradores de minas.
-	\item Robots exploradores de rescate en catástrofes.
-	\item Robots exploradores de tuberías.
-	\item Robots exploradores acuáticos y/o submarinos.
-\end{itemize}
+En el siguiente diagrama se puede apreciar el diseño a alto nivel del sistema embebido del robot.
 
 \begin{figure}[htpb]
 \centering 
@@ -145,14 +139,12 @@ Algunos de los tipos de robots exploradores más conocidos son:
 
 \vspace{25px}
 
+
 \end{consigna}
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
-
 \begin{consigna}{red} % este comando se debe borrar para la entrega, junto con la contraparte \end{consigna}{red} 
- 
-
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
 %\label{tab:interesados}
@@ -166,8 +158,7 @@ Impulsor      & -                  &    -          	&  -      	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores &  -                 &   -          	&   -     	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &    -          	&   -    	\\ \hline
+Equipo        & -		          &    -          	&   -    	\\ \hline
 Opositores    &   -               &    -         	&   -    	\\ \hline
 Usuario final &   -               &    -         	&        	\\ \hline
 \end{tabularx}
@@ -182,7 +173,16 @@ Usuario final &   -               &    -         	&        	\\ \hline
 \label{sec:proposito}
 
 \begin{consigna}{black}
-El propósito de este proyecto es volcar los conocimientos aprendidos en la especializacion implementando un sistema embebido para un robot capaz de desplazarse, sensar e interactuar con el ambiente.
+El propósito de este proyecto es volcar en un caso de la industria los conocimientos mas importantes aprendidos en la especialización de sistemas embebidos, tales como:
+\begin{itemize}
+	\item programación y diseño de sistemas embebidos, patrones de diseño y buenas prácticas.
+	\item utilización de un sistema operativo para sistemas embebidos como FreeRTOS.
+	\item integración y despliegue sobre una arquitectura ESP32.
+	\item integración con hardware de medición, como por ejemplo los sensores que se dispondrán en el robot.
+	\item integración con hardware de desplazamiento, como por ejemplo los motores.
+\end{itemize}
+
+Finalmente, cabe destacar, que si bien el robot de exploración ambiental del presente trabajo es una implementación abstracta con a funcionalidades genéricas (detalladas más adelante en la sección Alcance del Proyecto), su arquitectura podría ser extrapolada a casos de uso más interesantes y de valor en la industria como por ejemplo la exploración de suelos en el agro, la exploración submarina para la perforación de pozos de petróleo, o los antes mencionados en el estado del arte.
 
 \end{consigna}
 
@@ -190,23 +190,26 @@ El propósito de este proyecto es volcar los conocimientos aprendidos en la espe
 \label{sec:alcance}
 
 \begin{consigna}{black}
-El sistema embebido del robot debe poder controlar los dispositivos físicos de desplazamiento y sensores. Por medio de un Joystick cableado se puede comandar sus movimientos, y por medio de un display se puede ver las lecturas de sus sensores. 
-
-El sistema incluira las funcionalidades de gestión y control para poder realizar:
-
+Las funcionalidades incluidas en el robot de exploración ambiental serán:
 \begin{itemize}
-	\item El movimiento del robot, capaz de desplazarse hacia adelante y atrás, y girar hacia la  izquierda y la derecha.
-	\item Exploración ambiental y presentación de los valores censados
+	\item Sistema de desplazamiento: el robot debe ser capaz de desplazarse por medio de motores. Los movimientos contemplados sera hacia adelante, atras, y giros en ambas direcciones (360º).
+	\item Operaciones de exploración: el robot contendrá sensores de humedad, temperatura, presencia de gas y nivel de luminosidad.
+	\item Control: por medio de un Joystick cableado (en principio) se puede comandar sus movimientos.
+	\item Visualización: por medio de un display se puede ver las lecturas de sus sensores.
 \end{itemize}
+
+Queda (inicialmente) fuera del alcance:
+\begin{itemize}
+	\item la función de visión desde el robot, para transmitir lo que visualiza desde una cámara, así como su renderización en el puesto de mandos.
+	\item el uso de comunicación inalámbrica entre el robot y el puesto de mandos.
+\end{itemize}
+
 
 Desde el centro de mando conformado por el Joystick y el display se podrá:
 \begin{itemize}
-	\item controlar el desplazamiento, estado y operaciones del robot implementando un sistema de comunicación cableado
-	\item Mediante el joystick con un display se podrá renderizar el estado y lectura de los sensores
+	\item controlar el desplazamiento, estado y operaciones del robot implementando un sistema de comunicación cableado.
+	\item Mediante el joystick con un display se podrá renderizar el estado y lectura de los sensores.
 \end{itemize}
- 
-El sistema embebido del robot se implementará microcontroladores ESP32 utilizando FreeRTOS como sistema base.
-
 
 \end{consigna}
 
@@ -218,7 +221,8 @@ El sistema embebido del robot se implementará microcontroladores ESP32 utilizan
 Para el desarrollo del presente proyecto se supone que: 
 
 \begin{itemize}
-	\item Para la implementación de las funcionalidades que satisfagan los requisitos presentes en este documento se asume que es posible conseguir los componentes hardware necesarios.
+	\item será posible conseguir los componentes materiales necesarios.
+	\item el director asignado tendrá la disponibilidad de tiempo para darle seguimiento al proyecto.
 \end{itemize}
 
 
@@ -341,7 +345,7 @@ Armar el AoN a partir del WBS definido en la etapa anterior.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+%\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
