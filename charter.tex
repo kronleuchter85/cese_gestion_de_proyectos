@@ -189,8 +189,7 @@ Las funcionalidades incluidas en el alcance del proyecto serán:
 
 Queda fuera del alcance:
 \begin{itemize}
-	\item cualquier función de visión desde el robot,
-	\item el uso de comunicación inalámbrica entre el robot y el puesto de mandos,
+	\item locomocion por cualquier otro medio que no sea terrestre,
 	\item cualquier otra función no contemplada en este alcance.
 \end{itemize}
 \end{consigna}
@@ -217,70 +216,81 @@ Para el desarrollo del presente proyecto se supone que:
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
-
 \begin{consigna}{black}
-A continuacion se listan los siguientes requerimientos:
-
-\begin{enumerate}
-	\item Requerimientos funcionales
-		\begin{enumerate}
-			\item El sistema debe contar con funciones de desplazamiento para poder moverse hacia adelante y atras, y poder girar radialmente hasta un angulo de 360 grados.
-			\item El sistema debe ser capaz de eplorar
-			\item El usuario debe poder...
-		\end{enumerate}
-	\item Requerimientos de documentación
-		\begin{enumerate}
-			\item Requerimiento 1
-			\item Requerimiento 2 (prioridad menor)
-		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+A continuación se listan los requerimientos del producto:
+\begin{enumerate}	
+	\item Requerimientos funcionales		
+	\begin{enumerate}			
+		\item El sistema debe contar con funciones de desplazamiento para poder moverse hacia adelante y atrás, y poder girar radialmente hasta un ángulo de 360 grados.			
+		\item El sistema debe ser capaz de realizar las siguientes operaciones de exploración:			
+			\begin{enumerate}				
+				\item medición de humedad en el ambiente				
+				\item medición de temperatura en el ambiente				
+				\item medición de luminosidad en el ambiente				
+				\item detección de gas en el ambiente			
+			\end{enumerate}			
+		\item El sistema debe poder ser controlado a distancia mediante un joystick para que el dispositivo pueda realizar sus movimientos. En caso de que alguna de sus operaciones de exploración requiera algún mecanismo de control, el mismo también será integrado en el joystick.		
+		\item El sistema debe proveer un mecanismo de visualización de las operaciones de exploración al usuario que controla el dispositivo para poder ver el estado y lectura de las operaciones de exploración.		
+		\end{enumerate}	
+	\item Requerimientos de documentación		
+		\begin{enumerate}			
+			\item Se debe incluir documentación de arquitectura técnica a alto nivel del diseño del sistema.			
+			\item Se debe incluir documentación de técnica nivel detallado de la implementación del software.			
+			\item Se debe incluir documentación de técnica nivel detallado de la implementación del hardware.			
+			\item Se debe incluir manual de usuario.		
+		\end{enumerate}	
+	\item Requerimiento de testing		
+		\begin{enumerate}			
+			\item Se debe incluir tests de integración de componentes		
+		\end{enumerate}	
+	\item Requerimientos de la interfaz		
+		\begin{enumerate}			
+			\item La interfaz de usuario debe permitir visualizar las lecturas de cada uno de los sensores			
+			\item Debe haber una pequeña leyenda de que magnitud se está midiendo y la unidad de medida utilizada junto con el valor,		
+		\end{enumerate}	
+	\item Requerimientos opcionales		
+		\begin{enumerate}			
+			\item De interfaz: Se permite agregar cualquier otra interfaz adicional que agregue mejoras en la experiencia de usuario			
+			\item De operaciones de exploración: Se permite agregar cualquier otra operación adicional de exploración que agregue valor a exploración.			
+			\item De comunicación: Se permite agregar comunicación inalámbrica.		
+	\end{enumerate}
 \end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
 
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
 
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
 
 \end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
-
-El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
-
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
+\begin{consigna}{black}
+A continuacion se listan las historias de usuario. La ponderacion de \textit{story points} se realiza considerando 1 punto = 1 hora:
+\begin{itemize}
+	\item (150 puntos) Como explorador quiero ver las lecturas de exploración en un display, indicando las magnitudes y unidades usadas para saber lo que el robot está midiendo.
+	\item (100 puntos) Como explorador quiero que el robot pueda medir presencia de gas para que sea de utilidad en la aplicaciones de mineria y excavación.
+	\item (100 puntos) Como explorador quiero que el robot pueda medir temperatura y humedad para que sea de utilidad en aplicaciones donde sea necesario determinar la temperatura y humedad ambiental en un lugar remoto y una persona no pueda/deba acceder.
+	\item (100 puntos) Como explorador quiero que el robot pueda medir luminosidad ambiental para poder usarlo en aplicaciones de mineria.
+	\item (150 puntos) Como explorador quiero un joystick para poder controlar los movimientos del robot.
+\end{itemize}
 \end{consigna}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
-
-\begin{consigna}{red}
-
-Los entregables del proyecto son (ejemplo):
-
+\begin{consigna}{black}
+Los entregables del proyecto son:
 \begin{itemize}
-	\item Manual de uso
-	\item Diagrama de circuitos esquemáticos
+	\item Documentación:
+	\begin{enumerate}				
+		\item Manual de usuario				
+		\item Documentación de arquitectura técnica del sistema
+		\item Documentación técnica de diseño de software
+		\item Documentación técnica de diseño de hardware						
+	\end{enumerate}	
 	\item Código fuente del firmware
-	\item Diagrama de instalación
+	\item Video demostrativo de uso 
 	\item Informe final
-	\item etc...
 \end{itemize}
-
 \end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
