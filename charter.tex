@@ -296,35 +296,56 @@ Los entregables del proyecto son:
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
+\begin{consigna}{black}
+El conjunto de actividades y tareas que se realizarán durante el proyecto son:
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item POC (prueba de concepto), experimentación y prototipado
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas h)
+	\item POC de plataforma base (24 h)
+	\item POC e integración de sensor de temperatura y humedad en plataforma base (24 hs)
+	\item POC e integración de sensor de luminosidad en plataforma base (24 h)
+	\item POC e integración de sensor de gas en plataforma base (24 h)
+	\item POC e integración de motores en plataforma base (24 h)
+	\item POC e integración de joystick en plataforma base (24 h)
+	\item POC e integración de display en plataforma base (24 h)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Set-up ambiente de integración continua (actividad opcional) 
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Set-up imagen Docker con codigo de proyecto (24 h)
+	\item Set-up servicio de integración continua cloud (24 h)
+	\item Configuracion con Github para tomar los commits y ejecutar los builds (24 h)
 	\end{enumerate}
-\item Grupo de tareas 3
+\item Diseño y desarrollo de funcionalidades
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item Diseño del framework de orquestascion de componentes (24 h)
+	\item Desarrollo de funcionalidad de medición de temperatura y humedad (16 h)
+	\item Desarrollo de funcionalidad de medición de gas (16 h)
+	\item Desarrollo de funcionalidad de medición de luminosidad (16 h)
+	\item Desarrollo de funcionalidad de medición de desplazamiento (16 h)
+	\item Desarrollo de funcionalidad de medicion de comandos en el joystick analógico (16 h)
+	\item Desarrollo de funcionalidad de escritura y formato de valores en el display (16 h)
+	\end{enumerate}
+\item Testing
+	\begin{enumerate}
+	\item Desarrollo de tests de integración de sensores (24 h)
+	\item Desarrollo de tests de integración de display (24 h)
+	\item Desarrollo de tests de integración de joystick (24 h)
+	\item Desarrollo de tests de integración de motores (24 h)
+	\end{enumerate}
+\item Ensamblado del hardware
+	\begin{enumerate}
+	\item Ensamblado del joystick (36 h)
+	\item Enamblado del robot (36 h)
+	\end{enumerate}
+\item Funcionalidades extras (actividad opcional) 
+	\begin{enumerate}
+	\item POC comunicación inalámbrica (36 h)
+	\item POC dispositivo de video camara integrada (36 h)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: (tantas h)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 h. 
+Cantidad total de horas: (600 h)
 
 \end{consigna}
 
