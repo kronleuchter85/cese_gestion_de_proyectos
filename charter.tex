@@ -20,14 +20,14 @@ codirector, % Uncomment to add a codirector to the title page
 \autor{Ing. Gonzalo F. Carreño} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{DIRECTOR}
-\pertenenciaDirector{pertenencia} 
+\director{Ing. Sergio Alberino}
+\pertenenciaDirector{FIUBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{CODIRECTOR} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{-}
+\cliente{Lic. Mariano Landini}
 \empresaCliente{-}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
@@ -68,9 +68,10 @@ codirector, % Uncomment to add a codirector to the title page
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-0      & Creación del documento                                 &\fechaInicioName \\ \hline
-1      & Se completa hasta el punto 5 inclusive                 & 14 de marzo de 2023 \\ \hline
-2      & Se completa hasta el punto 9 inclusive	y se agregan correcciones				& 21 de marzo de 2023 \\ \hline
+0      & Creación del documento.                                 &\fechaInicioName \\ \hline
+1      & Se completa hasta el punto 5 inclusive.                 & 14 de marzo de 2023 \\ \hline
+2      & Se completa hasta el punto 9 inclusive	y se agregan correcciones.				& 21 de marzo de 2023 \\ \hline
+3      & Se completa hasta el punto 12 inclusive y se agregan correcciones. 				& 29 de marzo de 2023 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -92,7 +93,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{black}{la implementación de un prototipo de un sistema embebido para un dispositivo móvil controlado a distancia con funcionalidades que permiten explorar el entorno}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$14.000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{black}{la implementación de un prototipo de un sistema embebido para un dispositivo móvil controlado a distancia con funcionalidades que permiten explorar el entorno}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{760} h de trabajo y \textcolor{red}{\$14.000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -118,7 +119,7 @@ Se adjunta a esta acta la planificación inicial.
 \begin{consigna}{black} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección. En cada entrega parcial deben eliminar los comandos begin y end del bloque consigna de las secciones que hayan completado.
 El presente proyecto es un emprendimiento personal que busca volcar los conocimientos aprendidos de diseño y programación de sistemas embebidos tomando como caso de uso un robot de exploración ambiental. 
 
-En una primera el dispositivo versión tendrá las funciones básicas de poder desplazarse, sensar el medio ambiente, ser controlado por un mando a distancia de manera cableada y comunicar las diferentes mediciones al control de mandos para su visualización.
+En una primera versión el dispositivo tendrá las funciones básicas de poder desplazarse, sensar el medio ambiente, ser controlado por un mando a distancia de manera cableada y comunicar las diferentes mediciones al control de mandos para su visualización.
 
 
 \textit{\textbf{Estado del arte:}}
@@ -182,14 +183,14 @@ Finalmente, cabe destacar, que si bien el robot de exploración ambiental del pr
 Las funcionalidades incluidas en el alcance del proyecto serán:
 \begin{itemize}
 	\item Sistema de desplazamiento terrestre.
-	\item Operaciones de exploración (como por ejemplo medición de humedad, temperatura, presencia de gas, etc).
+	\item Operaciones de exploración (como por ejemplo medición de humedad, temperatura, presión ambiental, etc).
 	\item Visualización de estado de exploración (lecturas de los sensores).
 	\item Sistema de control por medio de un Joystick cableado.
 \end{itemize}
 
 Queda fuera del alcance:
 \begin{itemize}
-	\item locomocion por cualquier otro medio que no sea terrestre,
+	\item locomoción por cualquier otro medio que no sea terrestre,
 	\item cualquier otra función no contemplada en este alcance.
 \end{itemize}
 \end{consigna}
@@ -204,11 +205,12 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
 	\item será posible conseguir los componentes materiales necesarios,
 	\item se dispondrá del conjunto de librerías, drivers y APIs de bajo nivel para el desarrollo de las funcionalidades planteadas en el alcance sin ser necesario el desarrollo de drivers y dichos componentes de bajo nivel,
-	\item los componentes open source de la comunidad de software libre utilizados utilizados a bajo nivel para el acceso al hardware de sensores y actuadores se encontrara estable para que su integración en el proyecto no resulte en desvíos,	
+	\item los componentes open source de la comunidad de software libre utilizados a bajo nivel para el acceso al hardware de sensores y actuadores se encontrará estable para que su integración en el proyecto no resulte en desvíos,	
 	\item tanto el prototipado de los componentes de software del sistema embebido como el ensamblado de los componentes de hardware del dispositivo no producirán desvíos considerables en el plan,
-	\item no habrá desvíos otros desvios no contemplados en el plan que impidan o demoren entregas en el proyecto,
+	\item no habrá desvíos no contemplados en el plan que impidan o demoren entregas en el proyecto,
 	\item el comité académico encargado de la corrección tendrá disponibilidad para realizar la evaluación en las fechas planificadas de entrega,
 	\item el director asignado tendrá la disponibilidad de tiempo para darle seguimiento al proyecto.
+	\item el alumno contará con una disponibilidad de 5 horas diarias (incluyendo fines de semana) para el desarrollo del proyecto en el tiempo convenido.
 \end{itemize}
 
 
@@ -224,35 +226,37 @@ A continuación se listan los requerimientos del producto:
 		\item El sistema debe contar con funciones de desplazamiento para poder moverse hacia adelante y atrás, y poder girar radialmente hasta un ángulo de 360 grados.			
 		\item El sistema debe ser capaz de realizar las siguientes operaciones de exploración:			
 			\begin{enumerate}				
-				\item medición de humedad en el ambiente				
-				\item medición de temperatura en el ambiente				
-				\item medición de luminosidad en el ambiente				
-				\item detección de gas en el ambiente			
+				\item medición de humedad en el ambiente,				
+				\item medición de temperatura en el ambiente,				
+				\item medición de luminosidad en el ambiente,				
+				\item medición de presión ambiental.			
 			\end{enumerate}			
 		\item El sistema debe poder ser controlado a distancia mediante un joystick para que el dispositivo pueda realizar sus movimientos. En caso de que alguna de sus operaciones de exploración requiera algún mecanismo de control, el mismo también será integrado en el joystick.		
 		\item El sistema debe proveer un mecanismo de visualización de las operaciones de exploración al usuario que controla el dispositivo para poder ver el estado y lectura de las operaciones de exploración.		
 		\end{enumerate}	
 	\item Requerimientos de documentación		
 		\begin{enumerate}			
-			\item Se debe incluir documentación de arquitectura técnica a alto nivel del diseño del sistema.			
-			\item Se debe incluir documentación de técnica nivel detallado de la implementación del software.			
-			\item Se debe incluir documentación de técnica nivel detallado de la implementación del hardware.			
-			\item Se debe incluir manual de usuario.		
+			\item Documentación de arquitectura técnica a alto nivel del diseño del sistema.			
+			\item Documentación técnica de la implementación del software.			
+			\item Documentación técnica de la implementación del hardware.			
+			\item Manual de usuario.	
+			\item Informe de avance.
+			\item Memoria final.	
 		\end{enumerate}	
 	\item Requerimiento de testing		
 		\begin{enumerate}			
-			\item Se debe incluir tests de integración de componentes		
+			\item Se debe incluir tests de integración de componentes.		
 		\end{enumerate}	
 	\item Requerimientos de la interfaz		
 		\begin{enumerate}			
-			\item La interfaz de usuario debe permitir visualizar las lecturas de cada uno de los sensores			
-			\item Debe haber una pequeña leyenda de que magnitud se está midiendo y la unidad de medida utilizada junto con el valor,		
+			\item La interfaz de usuario debe permitir visualizar las lecturas de cada uno de los sensores.			
+			\item Debe haber una pequeña leyenda de la magnitud que se está midiendo y la unidad utilizada junto con el valor.		
 		\end{enumerate}	
 	\item Requerimientos opcionales		
 		\begin{enumerate}			
-			\item De interfaz: Se permite agregar cualquier otra interfaz adicional que agregue mejoras en la experiencia de usuario			
-			\item De operaciones de exploración: Se permite agregar cualquier otra operación adicional de exploración que agregue valor a exploración.			
-			\item De comunicación: Se permite agregar comunicación inalámbrica.		
+			\item De interfaz: se permite agregar cualquier otra interfaz adicional que agregue mejoras en la experiencia de usuario			
+			\item De operaciones de exploración: se permite agregar cualquier otra operación adicional de exploración que agregue valor a exploración.	
+			\item De comunicación: se permite agregar comunicación inalámbrica.		
 	\end{enumerate}
 \end{enumerate}
 
@@ -268,8 +272,8 @@ A continuación se listan los requerimientos del producto:
 A continuacion se listan las historias de usuario. La ponderacion de \textit{story points} se realiza considerando 1 punto = 1 hora:
 \begin{itemize}
 	\item (150 puntos) Como explorador quiero ver las lecturas de exploración en un display, indicando las magnitudes y unidades usadas para saber lo que el robot está midiendo.
-	\item (100 puntos) Como explorador quiero que el robot pueda medir presencia de gas para que sea de utilidad en la aplicaciones de mineria y excavación.
-	\item (100 puntos) Como explorador quiero que el robot pueda medir temperatura y humedad para que sea de utilidad en aplicaciones donde sea necesario determinar la temperatura y humedad ambiental en un lugar remoto y una persona no pueda/deba acceder.
+	\item (100 puntos) Como explorador quiero que el robot pueda medir la presión ambiental para que sea de utilidad en la aplicaciones de mineria y excavación.
+	\item (100 puntos) Como explorador quiero que el robot pueda medir temperatura y humedad para que sea de utilidad en aplicaciones donde sea necesario determinar dichos parámetros ambientales y una persona no pueda/deba acceder.
 	\item (100 puntos) Como explorador quiero que el robot pueda medir luminosidad ambiental para poder usarlo en aplicaciones de mineria.
 	\item (150 puntos) Como explorador quiero un joystick para poder controlar los movimientos del robot.
 \end{itemize}
@@ -282,14 +286,16 @@ Los entregables del proyecto son:
 \begin{itemize}
 	\item Documentación:
 	\begin{enumerate}				
-		\item Manual de usuario				
-		\item Documentación de arquitectura técnica del sistema
-		\item Documentación técnica de diseño de software
-		\item Documentación técnica de diseño de hardware						
+		\item Manual de usuario,			
+		\item Memoria final,
+		\item Informe de avance,
+		\item Documentación de arquitectura técnica del sistema,
+		\item Documentación técnica de diseño de software,
+		\item Documentación técnica de diseño de hardware.						
 	\end{enumerate}	
-	\item Código fuente del firmware
-	\item Video demostrativo de uso 
-	\item Informe final
+	\item Código fuente del firmware.
+	\item Video demostrativo de uso. 
+	\item Informe final.
 \end{itemize}
 \end{consigna}
 
@@ -300,147 +306,124 @@ Los entregables del proyecto son:
 El conjunto de actividades y tareas que se realizarán durante el proyecto son:
 
 \begin{enumerate}
-\item POC (prueba de concepto), experimentación y prototipado
+\item POC (prueba de concepto), experimentación y prototipado (168 h)
 	\begin{enumerate}
-	\item POC de plataforma base (24 h)
-	\item POC e integración de sensor de temperatura y humedad en plataforma base (24 hs)
-	\item POC e integración de sensor de luminosidad en plataforma base (24 h)
-	\item POC e integración de sensor de gas en plataforma base (24 h)
-	\item POC e integración de motores en plataforma base (24 h)
-	\item POC e integración de joystick en plataforma base (24 h)
-	\item POC e integración de display en plataforma base (24 h)
+	\item POC de plataforma base (24 h).
+	\item POC e integración de sensor de temperatura y humedad en plataforma base (24 hs).
+	\item POC e integración de sensor de luminosidad en plataforma base (24 h).
+	\item POC e integración de sensor de presión ambiental en plataforma base (24 h).
+	\item POC e integración de motores en plataforma base (24 h).
+	\item POC e integración de joystick en plataforma base (24 h).
+	\item POC e integración de display en plataforma base (24 h).
 	\end{enumerate}
-\item Set-up ambiente de integración continua (actividad opcional) 
+\item Set-up ambiente de integración continua (actividad opcional) (72 h)
 	\begin{enumerate}
-	\item Set-up imagen Docker con codigo de proyecto (24 h)
-	\item Set-up servicio de integración continua cloud (24 h)
-	\item Configuracion con Github para tomar los commits y ejecutar los builds (24 h)
+	\item Set-up imagen Docker con codigo de proyecto (24 h).
+	\item Set-up servicio de integración continua cloud (24 h).
+	\item Configuracion con Github para tomar los commits y ejecutar los builds (24 h).
 	\end{enumerate}
-\item Diseño y desarrollo de funcionalidades
+\item Diseño y desarrollo de funcionalidades (120 h)
 	\begin{enumerate}
-	\item Diseño del framework de orquestascion de componentes (24 h)
-	\item Desarrollo de funcionalidad de medición de temperatura y humedad (16 h)
-	\item Desarrollo de funcionalidad de medición de gas (16 h)
-	\item Desarrollo de funcionalidad de medición de luminosidad (16 h)
-	\item Desarrollo de funcionalidad de medición de desplazamiento (16 h)
-	\item Desarrollo de funcionalidad de medicion de comandos en el joystick analógico (16 h)
-	\item Desarrollo de funcionalidad de escritura y formato de valores en el display (16 h)
+	\item Diseño del framework de orquestascion de componentes (24 h).
+	\item Desarrollo de funcionalidad de medición de temperatura y humedad (16 h).
+	\item Desarrollo de funcionalidad de medición de presión ambiental (16 h).
+	\item Desarrollo de funcionalidad de medición de luminosidad (16 h).
+	\item Desarrollo de funcionalidad de medición de desplazamiento (16 h).
+	\item Desarrollo de funcionalidad de medicion de comandos en el joystick analógico (16 h).
+	\item Desarrollo de funcionalidad de escritura y formato de valores en el display (16 h).
 	\end{enumerate}
-\item Testing
+\item Testing (96 h)
 	\begin{enumerate}
-	\item Desarrollo de tests de integración de sensores (24 h)
-	\item Desarrollo de tests de integración de display (24 h)
-	\item Desarrollo de tests de integración de joystick (24 h)
-	\item Desarrollo de tests de integración de motores (24 h)
+	\item Desarrollo de tests de integración de sensores (24 h).
+	\item Desarrollo de tests de integración de display (24 h).
+	\item Desarrollo de tests de integración de joystick (24 h).
+	\item Desarrollo de tests de integración de motores (24 h).
 	\end{enumerate}
-\item Ensamblado del hardware
+\item Ensamblado del hardware (72 h)
 	\begin{enumerate}
-	\item Ensamblado del joystick (36 h)
-	\item Enamblado del robot (36 h)
+	\item Ensamblado del joystick (36 h).
+	\item Enamblado del robot (36 h).
 	\end{enumerate}
-\item Funcionalidades extras (actividad opcional) 
+\item Funcionalidades extras (actividad opcional) (72 h)
 	\begin{enumerate}
-	\item POC comunicación inalámbrica (36 h)
-	\item POC dispositivo de video camara integrada (36 h)
+	\item POC comunicación inalámbrica (36 h).
+	\item POC dispositivo de video camara integrada (36 h).
 	\end{enumerate}
+\item Documentación (160 h)
+	\begin{enumerate}				
+	\item Escritura de manual de usuario (24 h).			
+	\item Escritura de memoria final (40 h).
+	\item Escritura de informe de avance (12 h).
+	\item Escritura de documentación de arquitectura técnica del sistema (24 h).
+	\item Escritura de documentación técnica de diseño de software (24 h).
+	\item Escritura de documentación técnica de diseño de hardware (24 h).		
+	\item Creacion del video demostrativo de uso (12 h).				
+	\end{enumerate}	
 \end{enumerate}
 
-Cantidad total de horas: (600 h)
+Cantidad total de horas: (760 h)
 
 \end{consigna}
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
+\begin{consigna}{black}
+A continuacion se detalla la lista de actividades que se realizaran durante el proyecto. Los tiempos estan expresados en días, y como se considera una dedicación de 5 horas diarias (incluyendo fines de semana). 
 
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
+\begin{table}[ht]
+%\caption{Identificación de los interesados}
+%\label{tab:interesados}
+\begin{tabularx}{\linewidth}{@{}|l|X|l|l|l|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Id	& Tarea           										& Duración 				 	& Dependencia	& Predecesora 	\\ \hline
 
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
+1	& POC, experimentación y prototipado					& 168 h / 29 d			& 				&  -      		\\ \hline
+2	& Set-up integración continua (opcional)				& 72 h / 15 d   			&         		&  				\\ \hline
+3	& Diseño y desarrollo de funcionalidades    			& 120 h / 24 d				& 			 	&  				\\ \hline
+4	& Testing								    			& 96 h / 19 d				& 				&  				\\ \hline
+5	& Ensamblado del hardware				    			& 72 h / 15 d				& 				&  				\\ \hline
+6	& Funcionalidades extras (opcional)						& 72 h / 15 d				& 				&  				\\ \hline
+7	& Documentación    										& 160 h / 32 d				& 			 	&  				\\ \hline
 
-\end{consigna}
+\end{tabularx}
+\end{table}
+
+
+Como se puede apreciar en el siguiente diagrama, el camino critico esta formado por las tareas: [1 - 3 - 4] y la duración mínima es de 74 días.
+
 
 \begin{figure}[htpb]
 \centering 
-%\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=.9\textwidth]{./Figuras/ProyectoFinal-Page-8.jpg}
 \caption{Diagrama de \textit{Activity on Node}.}
-\label{fig:AoN}
+\label{fig:diagBloques}
 \end{figure}
-
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
-
+\end{consigna}
 
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
+\begin{consigna}{black}
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
+En la siguiente figura, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{GanttProject}. 
 
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de Gantt de ejemplo}
-\label{fig:gantt}
-\end{figure}
-
-
-\begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt rotado}
+\includegraphics[width=0.95\textwidth]{./Figuras/Captura_Robot_Plan.png}
+\caption{Diagrama de Gantt del proyecto}
 \label{fig:diagGantt}
 \end{figure}
-
-\end{landscape}
-
 \end{consigna}
-
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
+\begin{consigna}{black}
 
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
+El siguiente cuadro presenta los costos estimados para el proyecto:
 
 \end{consigna}
 
@@ -455,24 +438,49 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+ ESP32 & 
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{5000} &
+  \multicolumn{1}{c|}{5000} \\ \hline
+ Joystick analogico &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{415} &
+  \multicolumn{1}{c|}{415} \\ \hline
+ Rueditas &
+  \multicolumn{1}{c|}{4} &
+  \multicolumn{1}{c|}{480} &
+  \multicolumn{1}{c|}{1920} \\ \hline
+ Sensor BMP280 &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{1255} &
+  \multicolumn{1}{c|}{1255} \\ \hline
+ Sensor DHT22 &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{2300} &
+  \multicolumn{1}{c|}{2300} \\ \hline
+ Fotoresitor &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{1220} &
+  \multicolumn{1}{c|}{1220} \\ \hline
+ Motores DC 3-6 V &
+  \multicolumn{1}{c|}{4} &
+  \multicolumn{1}{c|}{990} &
+  \multicolumn{1}{c|}{3960} \\ \hline
+ Cables dupont macho-macho &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{960} &
+  \multicolumn{1}{c|}{960} \\ \hline
+ Cables dupont macho-hembra &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{960} &
+  \multicolumn{1}{c|}{960} \\ \hline
+ Plaqueta de cobre para montar &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{1250} &
+  \multicolumn{1}{c|}{1250} \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{19240} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -480,22 +488,22 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+\multicolumn{1}{|l|}{-} &
+  - &
+  - &
+  -\\ \hline
+\multicolumn{1}{|l|}{-} &
+  - &
+  - &
+  - \\ \hline
+\multicolumn{1}{|l|}{-} &
+  - &
+  - &
+  - \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{-} \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{3}{|c|}{TOTAL} & 19240
    \\ \hline
 \end{tabularx}%
 \end{table}
