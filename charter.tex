@@ -20,7 +20,7 @@ codirector, % Uncomment to add a codirector to the title page
 \autor{Ing. Gonzalo F. Carreño} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Ing. Sergio Alberino}
+\director{Esp. Ing. Sergio Alberino}
 \pertenenciaDirector{FIUBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{CODIRECTOR} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
@@ -72,6 +72,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1      & Se completa hasta el punto 5 inclusive.                 & 14 de marzo de 2023 \\ \hline
 2      & Se completa hasta el punto 9 inclusive	y se agregan correcciones.				& 21 de marzo de 2023 \\ \hline
 3      & Se completa hasta el punto 12 inclusive y se agregan correcciones. 				& 28 de marzo de 2023 \\ \hline
+4      & Se completa hasta el punto 15 inclusive y se agregan correcciones. 				& 4 de abril de 2023 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -93,7 +94,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{black}{la implementación de un prototipo de un sistema embebido para un dispositivo móvil controlado a distancia con funcionalidades que permiten explorar el entorno}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{760} h de trabajo y \textcolor{red}{\$19.240}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{black}{la implementación de un prototipo de un sistema embebido para un dispositivo móvil controlado a distancia con funcionalidades que permiten explorar el entorno}, y tendrá un presupuesto preliminar estimado de \textcolor{black}{760} h de trabajo y \textcolor{black}{\$19.240}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -211,6 +212,9 @@ Para el desarrollo del presente proyecto se supone que:
 	\item el comité académico encargado de la corrección tendrá disponibilidad para realizar la evaluación en las fechas planificadas de entrega,
 	\item el director asignado tendrá la disponibilidad de tiempo para darle seguimiento al proyecto.
 	\item el alumno contará con una disponibilidad de 5 horas diarias (incluyendo fines de semana) para el desarrollo del proyecto en el tiempo convenido.
+	\item los materiales y componentes adquiridos funcionaran de forma óptima y de acuerdo a lo esperado
+	\item los recursos no directamente relacionados con el desarrollo del proyecto, pero utilizados durante el mismo, funcionaran adecuadamente y en caso de falta de suministro (por ejemplo el servicio de internet) o averia (por ejemplo en el caso de la computadora utilizada) la resolucion sera expeditiva no suponiendo un desvio en el plan.
+	\item no sucederan nuevos eventos de impacto global (pandemia, guerra mundiale, invasión alienígena, etc) durante el desarrollo del proyecto que impliquen una demora o imposibilidad en la entrega.
 \end{itemize}
 
 
@@ -318,7 +322,7 @@ El conjunto de actividades y tareas que se realizarán durante el proyecto son:
 	\end{enumerate}
 \item Set-up ambiente de integración continua (actividad opcional) (72 h)
 	\begin{enumerate}
-	\item Set-up imagen Docker con codigo de proyecto (24 h).
+	\item Set-up imagen Docker con código de proyecto (24 h).
 	\item Set-up servicio de integración continua cloud (24 h).
 	\item Configuracion con Github para tomar los commits y ejecutar los builds (24 h).
 	\end{enumerate}
@@ -329,7 +333,7 @@ El conjunto de actividades y tareas que se realizarán durante el proyecto son:
 	\item Desarrollo de funcionalidad de medición de presión ambiental (16 h).
 	\item Desarrollo de funcionalidad de medición de luminosidad (16 h).
 	\item Desarrollo de funcionalidad de medición de desplazamiento (16 h).
-	\item Desarrollo de funcionalidad de medicion de comandos en el joystick analógico (16 h).
+	\item Desarrollo de funcionalidad de medición de comandos en el joystick analógico (16 h).
 	\item Desarrollo de funcionalidad de escritura y formato de valores en el display (16 h).
 	\end{enumerate}
 \item Testing (96 h)
@@ -338,6 +342,9 @@ El conjunto de actividades y tareas que se realizarán durante el proyecto son:
 	\item Desarrollo de tests de integración de display (24 h).
 	\item Desarrollo de tests de integración de joystick (24 h).
 	\item Desarrollo de tests de integración de motores (24 h).
+	\item Desarrollo de tests de integracion de producto (16 h)
+	\item Tests funcional de interfaz (8 h)
+	\item Tests funcional del producto final (16 h)
 	\end{enumerate}
 \item Ensamblado del hardware (72 h)
 	\begin{enumerate}
@@ -347,7 +354,7 @@ El conjunto de actividades y tareas que se realizarán durante el proyecto son:
 \item Funcionalidades extras (actividad opcional) (72 h)
 	\begin{enumerate}
 	\item POC comunicación inalámbrica (36 h).
-	\item POC dispositivo de video camara integrada (36 h).
+	\item POC dispositivo de video cámara integrada (36 h).
 	\end{enumerate}
 \item Documentación (160 h)
 	\begin{enumerate}				
@@ -361,7 +368,7 @@ El conjunto de actividades y tareas que se realizarán durante el proyecto son:
 	\end{enumerate}	
 \end{enumerate}
 
-Cantidad total de horas: (760 h)
+Cantidad total de horas: (800 h)
 
 \end{consigna}
 
@@ -369,7 +376,7 @@ Cantidad total de horas: (760 h)
 \label{sec:AoN}
 
 \begin{consigna}{black}
-A continuacion se detalla la lista de actividades que se realizaran durante el proyecto. Los tiempos estan expresados en días, y como se considera una dedicación de 5 horas diarias (incluyendo fines de semana). 
+A continuacion se detalla la lista de actividades que se realizaran durante el proyecto. Los tiempos están expresados en días, y como se considera una dedicación de 5 horas diarias (incluyendo fines de semana). 
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -391,7 +398,7 @@ Id	& Tarea           										& Duración 				 	& Dependencia	& Predecesora 	\\
 \end{table}
 
 
-Como se puede apreciar en el siguiente diagrama, el camino critico esta formado por las tareas: [1 - 3 - 4] y la duración mínima es de 74 días.
+Como se puede apreciar en la figura 2, el camino crítico está formado por las tareas: [1 - 3 - 4] y la duración mínima es de 74 días.
 
 
 \begin{figure}[htpb]
@@ -408,12 +415,12 @@ Como se puede apreciar en el siguiente diagrama, el camino critico esta formado 
 
 \begin{consigna}{black}
 
-En la siguiente figura, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{GanttProject}. 
+En la figura 3, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{GanttProject}. 
 
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=0.95\textwidth]{./Figuras/Captura_Robot_Plan.png}
-\caption{Diagrama de Gantt del proyecto}
+\caption{Diagrama de Gantt del proyecto.}
 \label{fig:diagGantt}
 \end{figure}
 \end{consigna}
@@ -423,7 +430,7 @@ En la siguiente figura, se muestra un ejemplo de diagrama de Gantt realizado con
 
 \begin{consigna}{black}
 
-El siguiente cuadro presenta los costos estimados para el proyecto:
+El siguiente cuadro presenta los costos en pesos estimados para el proyecto:
 
 \end{consigna}
 
@@ -442,7 +449,7 @@ Descripción &
   \multicolumn{1}{c|}{1} &
   \multicolumn{1}{c|}{\$5.000} &
   \multicolumn{1}{c|}{\$5.000} \\ \hline
- Joystick analogico &
+ Joystick analógico &
   \multicolumn{1}{c|}{1} &
   \multicolumn{1}{c|}{\$415} &
   \multicolumn{1}{c|}{\$415} \\ \hline
@@ -479,62 +486,81 @@ Descripción &
   \multicolumn{1}{c|}{\$1.250} &
   \multicolumn{1}{c|}{\$1.250} \\ \hline
 
-\multicolumn{3}{|c|}{SUBTOTAL} &
+\multicolumn{3}{|c|}{TOTAL} &
   \multicolumn{1}{c|}{\$19.240} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{-} &
-  - &
-  - &
-  -\\ \hline
-\multicolumn{1}{|l|}{-} &
-  - &
-  - &
-  - \\ \hline
-\multicolumn{1}{|l|}{-} &
-  - &
-  - &
-  - \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{-} \\ \hline
-\rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} & \$19.240
-   \\ \hline
+% \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
+% \rowcolor[HTML]{C0C0C0} 
+% Descripción &
+%   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
+%   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
+%   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
+% \multicolumn{1}{|l|}{-} &
+%   - &
+%   - &
+%   -\\ \hline
+% \multicolumn{1}{|l|}{-} &
+%   - &
+%   - &
+%   - \\ \hline
+% \multicolumn{1}{|l|}{-} &
+%   - &
+%   - &
+%   - \\ \hline
+% \multicolumn{3}{|c|}{SUBTOTAL} &
+%   \multicolumn{1}{c|}{-} \\ \hline
+% \rowcolor[HTML]{C0C0C0}
+% \multicolumn{3}{|c|}{TOTAL} & \$19.240
+%    \\ \hline
 \end{tabularx}%
 \end{table}
+
+
 
 
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+\begin{consigna}{black}
 
-Riesgo 2:
+Se han identificado los siguientes riesgos:
+
+
+\begin{enumerate}
+
+\item Riesgo de demora
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (S): 9 - Teniendo en cuenta que solo habrá un recurso desarrollando el proyecto, una demora en cualquier tarea puede implicar demora en la fecha de entrega.
+	\item Ocurrencia (O): 3 - Dada la planificación y priorización de tareas, el riesgo de demora es bajo, pero no nulo.
 \end{itemize}
 
-Riesgo 3:
+
+\item Riesgo de no contar con toda la funcionalidad deseada
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (S): 9 - El no cumplimiento con la funcionalidad deseada pone en riesgo el éxito del proyecto.
+	\item Ocurrencia (O): 1 - La probabilidad de no poder cumplir con la funcionalidad deseada es realmente bajo teniendo en cuenta que tanto el alumno como el director tienen experiencia en el desarrollo de integraciones similares y los materiales necesarios son de fácil obtención.
 \end{itemize}
 
+\item Riesgo de calidad insuficiente
+\begin{itemize}
+	\item Severidad (S): 4 - La calidad insuficiente no pone en riesgo el cumplimiento con la funcionalidad pero si compromete la estabilidad y resistencia a fallas del producto, por lo que puede desencadenar en un producto poco o menos confiable.
+	\item Ocurrencia (O): 4 - Se estima que con las técnicas empleadas durante el desarrollo del producto, este riesgo tiene una baja probabilidad de ocurrencia.
+\end{itemize}
+
+
+\item Riesgo de desvío en costos
+\begin{itemize}
+	\item Severidad (S): 5 - La realización de este riesgo impacta en los costos del proyecto, pero no imposibilitan ni demora la entrega del mismo.
+	\item Ocurrencia (O): 8 - Teniendo en cuenta que los precios son estimados en base a los productos que se logran identificar al momento de realizar el presente plan, es altamente posible que haya artículos adicionales que requieran ser comprados y/o que los costos finales difieran de los esperados. Además de lo antes mencionado, existe el factor inflación argentina como otro disparador de este riesgo.
+\end{itemize}
+
+\item Riesgo de indisponibilidad de recursos
+\begin{itemize}
+	\item Severidad (S): 5 - Al momento de realizar el presente plan se identifican ciertos recursos y se asume que será posible disponer de ellos. No obstante, existe el riesgo de que esto no suceda así, y sea más difícil por ejemplo adquirir ciertos materiales, o haya recursos no directamente asociados al proyecto pero cuya ausencia lo afectan, como por ejemplo fallas en el acceso a internet, el mal funcionamiento de la computadora utilizada para su desarrollo, etc.
+	\item Ocurrencia (O): 2 - Se espera que la probabilidad de ocurrencia de este riesgo sea realmente baja.
+\end{itemize}
+
+\end{enumerate}
 
 b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 
@@ -542,72 +568,141 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+\rowcolor[HTML]{C0C0C0}
+Riesgo 													& S & O & RPN & S* & O* & RPN* \\ \hline
+Riesgo de demora en la entrega							& 9 & 3 & 27 &  9  &  3  & 27    \\ \hline
+Riesgo de no contar con toda la funcionalidad deseada	& 9 & 2 & 18  & 7  & 2 &  14    \\ \hline
+Riesgo de calidad insuficiente							& 4 & 4 & 16 &  - &  - &   -  \\ \hline
+Riesgo de desvío en costos								& 5 & 8 & 40 & 5  & 3  &  15   \\ \hline
+Riesgo de indisponibilidad de recursos					& 5 & 2 & 10 & -  & -  &   -   \\ \hline
 \end{tabularx}%
 \end{table}
 
-Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Criterio adoptado:
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 15.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
- 
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+\begin{enumerate}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
 
+	\item Riesgo de demora en la entrega: Las posibles causas del evento asociado están vinculadas a situaciones no controlables ni predecibles que impactan de alguna manera en la disponibilidad de tiempo o alguno de los recursos necesarios para la realización del proyecto. Por este motivo se considera que la única herramienta de mitigación disponible es o pedir una prórroga para la entrega, o aceptar el riesgo.
+	\begin{itemize}
+		\item Nueva Severidad (S*): 9 - No cambia.
+		\item Nueva Ocurrencia (O*): 3 - No cambia.
+	\end{itemize}
+	
+	\item Riesgo de no contar con toda la funcionalidad deseada: Las posibles causas del evento asociado están vinculadas a situaciones que impactan de alguna manera en la viabilidad o desarrollo de alguna de las funcionalidades en el tiempo planificado Por este motivo se considera como herramienta de mitigación sacrificar algún otro entregable, como por ejemplo la cobertura de testing (lo cual sacrifica calidad), o la documentación.
+	\begin{itemize}
+		\item Nueva Severidad (S*): 7 - Dado que tras la mitigación se incrementa el impacto por pérdida de calidad.
+		\item Nueva Ocurrencia (O*): 2 - Se reduce mucho la probabilidad de ocurrencia dado que se agrega tiempo para el desarrollo de funcionalidad eliminando el tiempo empeñado para el desarrollo de tests o documentación.
+	\end{itemize}
+	
+	
+	\item Riesgo de calidad insuficiente: Las posibles causas del evento asociado están vinculadas a la falta de estabilidad del producto. Para mitigar este problema se plantea incrementar las prácticas de testing y CI/CD (como actividad opcional) siempre que esto no dispare el riesgo 1 generando una demora en el proyecto.
+	\begin{itemize}
+		\item Nueva Severidad (S*): 4 - No cambia.
+		\item Nueva Ocurrencia (O*): 2 - Se reduce la probabilidad de que esto suceda.
+	\end{itemize}	
+	
+	\item Riesgo de desvío en costos: Las posibles causas del evento que dispara este riesgo son olvidar de estimar algún componente y la inflación. Para mitigar el segundo factor se plantean los precios en dólares americanos, dado que la inflación de los precios en dicha divisa sera inferior a los representados en pesos argentinos.
+	\begin{itemize}
+		\item Nueva Severidad (S*): 5 - Esto no varía.
+		\item Nueva Ocurrencia (O*): 3 - Se reduce mucho la probabilidad de ocurrencia dado que la inflación del USD es menor que la del peso.
+	\end{itemize}
+
+	
+\end{enumerate}
+
+\end{enumerate}
 \end{consigna}
 
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
+\begin{consigna}{black}
+A continuación se detalla cómo se realizará el control de calidad para cada uno de los requerimientos del producto:
+\begin{enumerate}	
+			
+		\item Funciones de desplazamiento (hacia adelante, atrás, y radialmente en 360 grados)
+		\begin{enumerate}				
+			\item Verificación previo a la entrega: se verificará mediante la ejecución de tests de integración para esta funcionalidad.			
+			\item el cliente validará la funcionalidad en el producto final.			
+		\end{enumerate}		
+		\item Operaciones de exploración ( medición de humedad, temperatura, luminosidad y presión ambiental)
+		\begin{enumerate}				
+			\item Verificación previo a la entrega: se verificará mediante la ejecución de tests de integración para esta funcionalidad.			
+			\item el cliente verifica la funcionalidad en el producto final.			
+		\end{enumerate}		
+		\item Control a distancia mediante joystick
+		\begin{enumerate}				
+			\item Verificación previo a la entrega: se verificará mediante la ejecución de tests de integración para esta funcionalidad.			
+			\item el cliente verifica la funcionalidad en el producto final.			
+		\end{enumerate}			
+		\item Visualización/reporte de las operaciones de exploración 
+		\begin{enumerate}				
+			\item Verificación previo a la entrega: se verificará mediante la ejecución de tests de integración para esta funcionalidad.			
+			\item el cliente verifica la funcionalidad en el producto final.			
+		\end{enumerate}			
+		\item Documentación técnica, manual de usuario, informe de avance y memoria final
+		\begin{enumerate}				
+			\item Verificación previo a la entrega: se verificará mediante la revisión de los documentos.			
+			\item el cliente verificará los documentos.			
+		\end{enumerate}			
+		\item Testing
+		\begin{enumerate}				
+			\item Verificación previo a la entrega: Se verificará el cumplimiento con los tests por funcionalidad previo la integración de cada componente en el prototipo final. 
+			\item El cliente validará el reporte de los tests de integración.
+		\end{enumerate}			
+		\item Requerimientos de la interfaz		
+		\begin{enumerate}			
+			\item Verificación previo a la entrega: Se verificará el cumplimiento con los requerimientos de interfaz mediante un smoke test, además del test funcional final sobre el prototipo integrado.			
+			\item El cliente verificará el cumplimiento con la interfaz sobre el prototipo final.		
+		\end{enumerate}	
+		\item Para los requerimientos adicionales (de interfaz, operaciones y comunicación)
+		\begin{enumerate}			
+			\item Una vez realizada una prueba de concepto de su viabilidad, serán prototipados y se realizará el correspondiente test de integración. El cliente confirmará si la funcionalidad provista en la prueba de concepto se ajusta al requerimiento opcional. Si esto es así, se integrará al prototipo final y se verificará el funcionamiento.
+			\item El cliente verifica la funcionalidad como parte del prototipo final
+	\end{enumerate}
+\end{enumerate}
 
-\begin{consigna}{red}
-Para cada uno de los requerimientos del proyecto indique:
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
-
-\begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
-\end{itemize}
-
-\end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
 
 \end{consigna}
 
-\section{15. Procesos de cierre}    
+\section{15. Procesos de cierre}   
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+\begin{consigna}{black}
+A continuación se detallan las pautas y actividades para realizar la reunión final de evaluación del proyecto:
 
 \begin{itemize}
 	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
+	 - Responsable: \authorname:
+	\begin{itemize}			
+		\item Se evaluaran los requerimientos y los objetivos alcanzados frente a los planteados en el plan
+		\item Se pondrá especial interés en verificar si se cumplieron los objetivos de tiempo y funcionalidad propuestos.
+	\end{itemize}	    	 
+	
 	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-	  - Indicar esto y quién financiará los gastos correspondientes.
+	 - Responsable: \authorname:
+	\begin{itemize}			
+		\item Se evaluará cuál fue la configuración que mejores resultados arroj́a, para los objetivos planteados en el plan.
+		\item Se identificar ́an nuevas herramientas o procedimientos, en caso que corresponda.
+	\end{itemize}	    	 
+	
+	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores - Responsable: \authorname :
+	\begin{itemize}			
+		\item Luego de la presentación del proyecto mediante la defensa pública , se procederá a agradecer a todas las personas que participaron del desarrollo del proyecto, al director, a los compañeros y a las autoridades del CESE.
+	\end{itemize}	 
+	
+	    	 
+	 
 \end{itemize}
 
 \end{consigna}
+
+
 
 
 \end{document}
