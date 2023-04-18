@@ -27,8 +27,8 @@
 %\pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Lic. Mariano Landini}
-\empresaCliente{-}
+\cliente{Esp. Lic. Mariano Landini}
+\empresaCliente{FCE UBA - Cliente}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -73,6 +73,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 2      & Se completa hasta el punto 9 inclusive	y se agregan correcciones.				& 21 de marzo de 2023 \\ \hline
 3      & Se completa hasta el punto 12 inclusive y se agregan correcciones. 				& 28 de marzo de 2023 \\ \hline
 4      & Se completa hasta el punto 15 inclusive y se agregan correcciones. 				& 4 de abril de 2023 \\ \hline
+5      & Se agregan correcciones de la version 4. 											& 11 de abril de 2023 \\ \hline
+
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & dd/mm/aaaa \\ \hline
@@ -94,7 +96,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{black}{la implementación de un prototipo de un sistema embebido para un dispositivo móvil controlado a distancia con funcionalidades que permiten explorar el entorno}, y tendrá un presupuesto preliminar estimado de \textcolor{black}{800} horas de trabajo y \textcolor{black}{\$ 108} dólares estadounidenses, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá en \textcolor{black}{la implementación de un prototipo de sistema embebido para un dispositivo móvil controlado a distancia con funcionalidades que permiten explorar el entorno}, y tendrá un presupuesto preliminar estimado de \textcolor{black}{\$ 108} dólares estadounidenses y \textcolor{black}{721} horas de trabajo, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -171,9 +173,8 @@ Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hli
 \label{sec:proposito}
 
 \begin{consigna}{black}
-El propósito de este proyecto es volcar en un caso de la industria los conocimientos más importantes aprendidos en la especialización de sistemas embebidos.
-
-Finalmente, cabe destacar, que si bien el robot de exploración ambiental del presente proyecto es una implementación abstracta con a funcionalidades genéricas (detalladas más adelante en la sección Alcance del Proyecto), su arquitectura podría ser extrapolada a casos de uso más interesantes y de valor en la industria como por ejemplo la exploración de suelos en el agro, la exploración submarina para la perforación de pozos de petróleo, o los antes mencionados en el estado del arte.
+El propósito de este proyecto es desarrollar un robot de exploración ambiental en el que se implementen distintas  funcionalidades (detalladas más adelante en la sección Alcance del Proyecto). Su arquitectura podría ser extrapolada a otros casos de uso y de valor en la industria como por ejemplo la exploración de suelos en el agro, la exploración submarina para la perforación de pozos de petróleo, o los antes mencionados en el estado del arte.
+Por otra parte, se pretende volcar en un desarrollo concreto y de aplicación industrial los conocimientos adquiridos durante la cursada de la la especialización de sistemas embebidos.
 
 \end{consigna}
 
@@ -183,10 +184,10 @@ Finalmente, cabe destacar, que si bien el robot de exploración ambiental del pr
 \begin{consigna}{black}
 Las funcionalidades incluidas en el alcance del proyecto serán:
 \begin{itemize}
-	\item Sistema de desplazamiento terrestre.
-	\item Operaciones de exploración (como por ejemplo medición de humedad, temperatura, presión ambiental, etc).
-	\item Visualización de estado de exploración (lecturas de los sensores).
-	\item Sistema de control por medio de un Joystick cableado.
+	\item sistema de desplazamiento terrestre.
+	\item operaciones de exploración (como por ejemplo medición de humedad, temperatura, presión ambiental, etc).
+	\item visualización de estado de exploración (lecturas de los sensores).
+	\item sistema de control por medio de un Joystick cableado.
 \end{itemize}
 
 Queda fuera del alcance:
@@ -211,7 +212,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\item no habrá desvíos no contemplados en el plan que impidan o demoren entregas en el proyecto,
 	\item el comité académico encargado de la corrección tendrá disponibilidad para realizar la evaluación en las fechas planificadas de entrega,
 	\item el director asignado tendrá la disponibilidad de tiempo para darle seguimiento al proyecto.
-	\item el alumno contará con una disponibilidad de 5 horas diarias (incluyendo fines de semana) para el desarrollo del proyecto en el tiempo convenido.
+	\item el alumno contará con una disponibilidad de entre 3 y 5 horas diarias (incluyendo fines de semana) para el desarrollo del proyecto en el tiempo convenido.
 	\item los materiales y componentes adquiridos funcionaran de forma óptima y de acuerdo a lo esperado
 	\item los recursos no directamente relacionados con el desarrollo del proyecto, pero utilizados durante el mismo, funcionaran adecuadamente y en caso de falta de suministro (por ejemplo el servicio de internet) o averia (por ejemplo en el caso de la computadora utilizada) la resolucion sera expeditiva no suponiendo un desvio en el plan.
 	\item no sucederan nuevos eventos de impacto global (pandemia, guerra mundiale, etc) durante el desarrollo del proyecto que impliquen una demora o imposibilidad en la entrega.
@@ -240,21 +241,22 @@ A continuación se listan los requerimientos del producto:
 		\end{enumerate}	
 	\item Requerimientos de documentación		
 		\begin{enumerate}			
-			\item Documentación de arquitectura técnica a alto nivel del diseño del sistema.			
-			\item Documentación técnica de la implementación del software.			
-			\item Documentación técnica de la implementación del hardware.			
-			\item Manual de usuario.	
-			\item Informe de avance.
-			\item Memoria final.	
+			\item documentación de arquitectura técnica a alto nivel del diseño del sistema.			
+			\item documentación técnica de la implementación del software.			
+			\item documentación técnica de la implementación del hardware.			
+			\item manual de usuario.	
+			\item informe de avance.
+			\item memoria final.	
 		\end{enumerate}	
 	\item Requerimiento de testing		
 		\begin{enumerate}			
-			\item Se debe incluir tests de integración de componentes.		
+			\item se debe incluir tests de integración de componentes,
+			\item se debe incluir tests funcionales (smoke test) del producto general.		
 		\end{enumerate}	
 	\item Requerimientos de la interfaz		
 		\begin{enumerate}			
-			\item La interfaz de usuario debe permitir visualizar las lecturas de cada uno de los sensores.			
-			\item Debe haber una pequeña leyenda de la magnitud que se está midiendo y la unidad utilizada junto con el valor.		
+			\item la interfaz de usuario debe permitir visualizar las lecturas de cada uno de los sensores,			
+			\item debe haber una pequeña leyenda de la magnitud que se está midiendo y la unidad utilizada junto con el valor.		
 		\end{enumerate}	
 	\item Requerimientos opcionales		
 		\begin{enumerate}			
@@ -310,65 +312,81 @@ Los entregables del proyecto son:
 El conjunto de actividades y tareas que se realizarán durante el proyecto son:
 
 \begin{enumerate}
-\item POC (prueba de concepto), experimentación y prototipado (168 h)
+
+\item Gestión del proyecto (45 hs)
 	\begin{enumerate}
-	\item POC de plataforma base (24 h).
-	\item POC e integración de sensor de temperatura y humedad en plataforma base (24 hs).
-	\item POC e integración de sensor de luminosidad en plataforma base (24 h).
-	\item POC e integración de sensor de presión ambiental en plataforma base (24 h).
-	\item POC e integración de motores en plataforma base (24 h).
-	\item POC e integración de joystick en plataforma base (24 h).
-	\item POC e integración de display en plataforma base (24 h).
+	\item Definición de alcance, funcionalidades e historias de usuario ( 3 hs).	
+	\item Armado del plan de actividades y tareas ( 3 hs).
+	\item Reconocimiento de riesgos (3 hs).
+	\item Definición de proceso de calidad (2 hs).
+	\item Confección de documentación de planificación de proyecto (10 hs).
+	\item Seguimiento y control de hitos, desvíos y riesgos(24 hs).	
 	\end{enumerate}
-\item Set-up ambiente de integración continua (actividad opcional) (72 h)
+\item Adquisición de materiales (16 hs)
 	\begin{enumerate}
-	\item Set-up imagen Docker con código de proyecto (24 h).
-	\item Set-up servicio de integración continua cloud (24 h).
-	\item Configuracion con Github para tomar los commits y ejecutar los builds (24 h).
+	\item Análisis y selección de materiales y proveedores (8 hs).
+	\item Compra de materiales (8 hs).
+	\end{enumerate}
+\item Investigación y prototipado (112 hs)
+	\begin{enumerate}
+	\item Prototipo de plataforma base (16 hs).
+	\item Prototipo de integración de sensor de temperatura y humedad en plataforma base (16 hs).
+	\item Prototipo de integración de sensor de luminosidad en plataforma base (16 hs).
+	\item Prototipo de integración de sensor de presión ambiental en plataforma base (16 hs).
+	\item Prototipo de integración de motores en plataforma base (16 hs).
+	\item Prototipo de integración de joystick en plataforma base (16 hs).
+	\item Prototipo de integración de display en plataforma base (16 hs).
+	\end{enumerate}
+\item Set-up ambiente de integración continua (actividad opcional) (44 hs)
+	\begin{enumerate}
+	\item Set-up imagen Docker con código de proyecto (24 hs).
+	\item Set-up servicio de integración continua cloud (12 hs).
+	\item Configuracion con Github para tomar los commits y ejecución de builds (8 hs).
 	\end{enumerate}
 \item Diseño y desarrollo de funcionalidades (120 h)
 	\begin{enumerate}
-	\item Diseño del framework de orquestascion de componentes (24 h).
-	\item Desarrollo de funcionalidad de medición de temperatura y humedad (16 h).
-	\item Desarrollo de funcionalidad de medición de presión ambiental (16 h).
-	\item Desarrollo de funcionalidad de medición de luminosidad (16 h).
-	\item Desarrollo de funcionalidad de medición de desplazamiento (16 h).
-	\item Desarrollo de funcionalidad de medición de comandos en el joystick analógico (16 h).
-	\item Desarrollo de funcionalidad de escritura y formato de valores en el display (16 h).
+	\item Diseño del framework de orquestascion de componentes (24 hs).
+	\item Desarrollo de funcionalidad de medición de temperatura y humedad (16 hs).
+	\item Desarrollo de funcionalidad de medición de presión ambiental (16 hs).
+	\item Desarrollo de funcionalidad de medición de luminosidad (16 hs).
+	\item Desarrollo de funcionalidad de desplazamiento (16 hs).
+	\item Desarrollo de funcionalidad de lectura de comandos en el joystick analógico (16 hs).
+	\item Desarrollo de funcionalidad de escritura y formato de valores en el display (16 hs).
 	\end{enumerate}
-\item Testing (96 h)
+\item Testing (92 hs)
 	\begin{enumerate}
-	\item Desarrollo de tests de integración de sensores (24 h).
-	\item Desarrollo de tests de integración de display (24 h).
-	\item Desarrollo de tests de integración de joystick (24 h).
-	\item Desarrollo de tests de integración de motores (24 h).
-	\item Desarrollo de tests de integracion de producto (16 h)
-	\item Tests funcional de interfaz (8 h)
-	\item Tests funcional del producto final (16 h)
+	\item Desarrollo de tests de integración de sensores (12 hs).
+	\item Desarrollo de tests de integración de display (12 hs).
+	\item Desarrollo de tests de integración de joystick (12 hs).
+	\item Desarrollo de tests de integración de motores (12 hs).
+	\item Desarrollo de tests de integracion de producto (12 hs).
+	\item Tests funcional de interfaz (8 hs).
+	\item Test de regresion (8 hs)
+	\item Tests funcional del producto final (16 hs).
 	\end{enumerate}
-\item Ensamblado del hardware (72 h)
+\item Ensamblado del hardware (60 hs)
 	\begin{enumerate}
-	\item Ensamblado del joystick (36 h).
-	\item Enamblado del robot (36 h).
+	\item Ensamblado del joystick (24 hs).
+	\item Enamblado del robot (36 hs).
 	\end{enumerate}
-\item Funcionalidades extras (actividad opcional) (72 h)
+\item Funcionalidades extras (actividad opcional) (72 hs)
 	\begin{enumerate}
-	\item POC comunicación inalámbrica (36 h).
-	\item POC dispositivo de video cámara integrada (36 h).
+	\item Prototipo de comunicación inalámbrica (36 hs).
+	\item Prototipo de visión por cámara integrada (36 hs).
 	\end{enumerate}
-\item Documentación (160 h)
+\item Documentación (160 hs)
 	\begin{enumerate}				
-	\item Escritura de manual de usuario (24 h).			
-	\item Escritura de memoria final (40 h).
-	\item Escritura de informe de avance (12 h).
-	\item Escritura de documentación de arquitectura técnica del sistema (24 h).
-	\item Escritura de documentación técnica de diseño de software (24 h).
-	\item Escritura de documentación técnica de diseño de hardware (24 h).		
-	\item Creacion del video demostrativo de uso (12 h).				
+	\item Escritura de manual de usuario (24 hs).			
+	\item Escritura de memoria final (40 hs).
+	\item Escritura de informe de avance (12 hs).
+	\item Escritura de documentación de arquitectura técnica del sistema (24 hs).
+	\item Escritura de documentación técnica de diseño de software (24 hs).
+	\item Escritura de documentación técnica de diseño de hardware (24 hs).		
+	\item Creacion del video demostrativo de uso (12 hs).				
 	\end{enumerate}	
 \end{enumerate}
 
-Cantidad total de horas: (800 h)
+Cantidad total de horas: (721 hs)
 
 \end{consigna}
 
@@ -376,7 +394,7 @@ Cantidad total de horas: (800 h)
 \label{sec:AoN}
 
 \begin{consigna}{black}
-A continuación se detalla la lista de actividades que se realizaran durante el proyecto. Los tiempos están expresados en días, y como se considera una dedicación de 5 horas diarias (incluyendo fines de semana). 
+A continuación se detalla la lista de actividades que se realizaran durante el proyecto. Los tiempos están expresados en días, y como se considera una dedicación de 4 horas diarias (incluyendo fines de semana). 
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -384,26 +402,27 @@ A continuación se detalla la lista de actividades que se realizaran durante el 
 \begin{tabularx}{\linewidth}{@{}|l|X|l|l|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Id	& Tarea           										& Duración 				 	& Dependencia	& Predecesora 	\\ \hline
-
-1	& POC, experimentación y prototipado					& 168 h / 29 d				& -				&  -      		\\ \hline
-2	& Set-up integración continua (opcional)				& 72 h / 15 d   			& -        		&  -			\\ \hline
-3	& Diseño y desarrollo de funcionalidades    			& 120 h / 24 d				& 1			 	& 1				\\ \hline
-4	& Testing								    			& 96 h / 19 d				& 3				& 3 , 6			\\ \hline
-5	& Ensamblado del hardware				    			& 72 h / 15 d				& -				& -				\\ \hline
-6	& Funcionalidades extras (opcional)						& 72 h / 15 d				& -				& - 			\\ \hline
-7	& Documentación    										& 160 h / 32 d				& -			 	& -				\\ \hline
+Id	& Tarea           									& Duración 			& Dependencia	& Predecesora 	\\ \hline
+1	& Gestión del proyecto 								& 45 h / 14 d		& -				&  7,4,9,6 		\\ \hline
+2	& Adquisición de materiales 						& 16 h / 4 d		& -				&  -      		\\ \hline
+3	& Investigación y prototipado						& 112 h / 28 d		& -				&  -      		\\ \hline
+4	& Set-up integración continua (opcional)			& 44 h / 11 d   	& -        		&  -			\\ \hline
+5	& Diseño y desarrollo de funcionalidades    		& 120 h / 30 d		& -			 	& 3 , 2			\\ \hline
+6	& Testing								    		& 92 h / 23 d		& -				& 5 , 8			\\ \hline
+7	& Ensamblado del hardware				    		& 60 h / 15 d		& -				& -				\\ \hline
+8	& Funcionalidades extras (opcional)					& 72 h / 18 d		& -				& - 			\\ \hline
+9	& Documentación    									& 160 h / 40 d		& -			 	& -				\\ \hline
 
 \end{tabularx}
 \end{table}
 
 
-Como se puede apreciar en la figura 2, el camino crítico está formado por las tareas: [1 - 3 - 4] y la duración mínima es de 74 días.
+Como se puede apreciar en la figura 2, el camino crítico está formado por las tareas: [3 - 5 - 6 - 1] y la duración mínima es de 81 días.
 
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.9\textwidth]{./Figuras/ProyectoFinal-Page-8.png}
+\includegraphics[width=.9\textwidth]{./Figuras/activity-on-node.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:diagBloques}
 \end{figure}
@@ -415,14 +434,32 @@ Como se puede apreciar en la figura 2, el camino crítico está formado por las 
 
 \begin{consigna}{black}
 
-En la figura 3, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{GanttProject}. 
+En la figura 3, se muestra el diagrama de Gantt realizado con el paquete de \textit{GanttProject} conteniendo el plan de actividades a alto nivel. 
+
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=0.95\textwidth]{./Figuras/Captura_Robot_Plan.png}
+\includegraphics[width=0.95\textwidth]{./Figuras/gantt-part-0.png}
 \caption{Diagrama de Gantt del proyecto.}
 \label{fig:diagGantt}
 \end{figure}
+
+En las figuras 4 y 5, se muestran los diagramas de Gantt conteniendo los detalles de tareas para las actividades del proyecto.
+ 
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=0.95\textwidth]{./Figuras/gantt-part-1.png}
+\caption{Diagrama de Gantt del proyecto.}
+\label{fig:diagGantt}
+\end{figure}
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=0.95\textwidth]{./Figuras/gantt-part-2.png}
+\caption{Diagrama de Gantt del proyecto.}
+\label{fig:diagGantt}
+\end{figure}
+
 \end{consigna}
 
 \section{12. Presupuesto detallado del proyecto}
@@ -488,30 +525,6 @@ Descripción &
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{3}{|c|}{TOTAL} &
   \multicolumn{1}{c|}{\$ 108,00} \\ \hline
-
-% \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
-% \rowcolor[HTML]{C0C0C0} 
-% Descripción &
-%   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-%   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-%   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-% \multicolumn{1}{|l|}{-} &
-%   - &
-%   - &
-%   -\\ \hline
-% \multicolumn{1}{|l|}{-} &
-%   - &
-%   - &
-%   - \\ \hline
-% \multicolumn{1}{|l|}{-} &
-%   - &
-%   - &
-%   - \\ \hline
-% \multicolumn{3}{|c|}{SUBTOTAL} &
-%   \multicolumn{1}{c|}{-} \\ \hline
-% \rowcolor[HTML]{C0C0C0}
-% \multicolumn{3}{|c|}{TOTAL} & \$19.240
-%    \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -570,7 +583,7 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0}
 Riesgo 													& S & O & RPN & S* & O* & RPN* \\ \hline
-Riesgo de demora en la entrega							& 9 & 3 & 27 &  9  &  3  & 27    \\ \hline
+Riesgo de demora en la entrega							& 9 & 3 & 27 &  9  &  1  & 9    \\ \hline
 Riesgo de no contar con toda la funcionalidad deseada	& 9 & 2 & 18  & 7  & 2 &  14    \\ \hline
 Riesgo de calidad insuficiente							& 4 & 4 & 16 &  4 &  2 &   8  \\ \hline
 Riesgo de desvío en costos								& 5 & 8 & 40 & 5  & 3  &  15   \\ \hline
@@ -585,12 +598,10 @@ Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplic
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
 \begin{enumerate}
-
-
-	\item Riesgo de demora en la entrega: las posibles causas del evento asociado están vinculadas a situaciones no controlables ni predecibles que impactan de alguna manera en la disponibilidad de tiempo o alguno de los recursos necesarios para la realización del proyecto. Por este motivo se considera que la única herramienta de mitigación disponible es o pedir una prórroga para la entrega, o aceptar el riesgo.
+	\item Riesgo de demora en la entrega: las posibles causas del evento asociado están vinculadas a situaciones no controlables ni predecibles que impactan de alguna manera en la disponibilidad de tiempo o alguno de los recursos necesarios para la realización del proyecto. Con el fin de cumplir con la entrega de la funcionalidad en la fecha acordada se consideran como posibles acciones de mitigación la eliminación (o no realización) de otras tareas dentro del plan, como por ejemplo, tareas de documentación, de ensamblado de hardware, de testing, y de ser necesario, de desarrollo de funcionalidad. Se asume que la eliminación de estas tareas ponen en riesgo la calidad del producto y/o contar con toda la funcionalidad esperada.
 	\begin{itemize}
 		\item Nueva Severidad (S*): 9 - No cambia.
-		\item Nueva Ocurrencia (O*): 3 - No cambia.
+		\item Nueva Ocurrencia (O*): 1.
 	\end{itemize}
 	
 	\item Riesgo de no contar con toda la funcionalidad deseada: las posibles causas del evento asociado están vinculadas a situaciones que impactan de alguna manera en la viabilidad o desarrollo de alguna de las funcionalidades en el tiempo planificado. Por este motivo se considera como herramienta de mitigación sacrificar algún otro entregable, como por ejemplo la cobertura de testing (lo cual sacrifica calidad), o la documentación.
